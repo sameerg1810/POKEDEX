@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chroma">
+    <meta name="viewport" content="width=device-width,initial scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>POKEMON WORLD</title>
+    <script src="https://kit.fontawesome.com/0cba31394f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="pokemon-container">
+        <div class="topNavbar">
+
+            <ul>
+                <li><a class="active" href="#home">NEWS</a></li>
+                <li><a href="#news">SHOWS</a></li>
+                <li><a href="#contact">GAMES</a></li>
+                <li><a href="#about">About</a></li>
+                <li>
+                    <h1 class="heading">POKEDEX</h1>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="container">
+            <div class="selectOptions">
+                <button type="button" id="addUser" onclick="openForm()">SIGN
+                    UP</button>
+                <button type="button" id="showAddress">POKEMON SHOP</button>
+                <button type="button" id="changePass">PLAY GAME</button>
+                <button type="button" id="removeUser" onclick="removeCard()">Settings</button>
+            </div>
+
+            <div class="mainContainer"><!-- //maincontainer// -->
+                <h3 style="color: rgb(255, 0, 0);font-size:40px;"><strong>Gotta Catch 'Em All</strong>
+                </h3>
+
+                <img src="./images/page1bg1.jpg" class="slideshow-image" alt=""><img src="./images/page1bg2.jpg"
+                    class="slideshow-image" alt=""><img src="./images/page1bg3.jpg" class="slideshow-image" alt=""><img
+                    src="./images/page1bg4.jpg" class="slideshow-image" alt=""><img src="./images/page1bg5.jpg"
+                    class="slideshow-image" alt=""><img src="./images/page1bg6.jpg" class="slideshow-image" alt=""><img
+                    src="./images/page1bg7.jpg" class="slideshow-image" alt=""><img src="./images/page1bg8.jpg"
+                    class="slideshow-image" alt=""><img src="./images/page1bg9.jpg" class="slideshow-image" alt="">
+
+                <!-- TO SEARCH AND SEE POKEDEX  -->
+                <div class="hide" id="cata">
+                    <!-- here u can select your desired pokemon -->
+                    <div id="mycatagory">
+                        <label class="closebtn" onclick="closeSearch()" title="Close catagory"><img
+                                src="images/cancel.png" width="15" height="15">Close</label>
+                        <div id="catagory-content">
+                            <!-- <label><input id="ident" type="number" placeholder="Search.." required>
+                                <button type="submit" onclick="getIDS()"><i class="fas fa-search"
+                                        onclick="searcher(this.value)"> <img src="/images/pokeball.png"
+                                            id="pokeball" /></i></button></label> -->
+                            <input type="text" name="" id="search-item" placeholder="Ex: Charizard or 6">
+                            <label for="search-item" id="searcher">
+                                <i class="fas fa-search" onclick=""> <img src="/images/pokeball.png" id="pokeball"
+                                        onclick="getPokemonData()" /></i>
+                            </label>
+
+                        </div>
+                        <!-- this is search input element -->
+                    </div>
+                    <!-- search INPUT and container ends here -->
+
+                    <div class="cardContainer"><!-- this container will show you the results of your search -->
+
+                        <div id="selecting">
+                            <span id="heading2">
+                                <h2>POKEMON STATUS</h2>
+                            </span>
+                            <select onchange="selectTag(this.value)">
+
+                            </select>
+                        </div>
+                        <div class="filter-container"></div>
+                    </div>
+                </div>
+
+                <button class="openBtn" onclick="openSearch()">Open Search
+                    Box</button><!-- this button is to open search field -->
+                <div class="col"> <!-- this is for user details submission form -->
+                    <div class="hide" id="myForm">
+
+                        <form class="formContainer" action="#">
+                            <label class="closebtn" onclick="closeForm()">
+                                <img src="images/cancel.png" width="15" height="15">
+                            </label>
+
+                            <div class="input-box">
+                                <label class="identity number">Id number
+                                    <input id="ids" type="number" placeholder="Enter your Id number
+                                            from 1 to 10" required></label>
+                            </div>
+
+                            <div class="input-box">
+                                <label class="Imagez">Profile Image
+                                    <input id="images" type="text" placeholder="Enter your image" required></label>
+                            </div>
+                            <div class="input-box">
+                                <label for="fname">First Name
+                                    <input id="fname" type="text" placeholder="Enter the first name" required></label>
+                            </div>
+                            <div class="input-box">
+                                <label for="lname">Last Name
+                                    <input id="lname" type="text" placeholder="Enter the last name" required
+                                        required></label>
+                            </div>
+                            <div class="input-box">
+                                <label class="email">email
+                                    <input id="emails" type="text" placeholder="email" required></label>
+                            </div>
+                            <div class="input-box">
+                                <label class="password">password
+                                    <input id="passwords" type="text" placeholder="password" required></label>
+                            </div>
+
+                            <!-- <div class="input-box">
+                                <label class="lat">lat
+                                    <input id="lats" type="text" placeholder="Enter your address-geolocation-lat"
+                                        required></label>
+                            </div>
+
+                            <div class="input-box">
+                                <label class="long">long
+                                    <input id="longs" type="text"
+                                        placeholder="Enter your address-geolocation-long"></label>
+                            </div> -->
+                            <div class="input-box">
+                                <label class="city">city
+                                    <input id="citys" type="text" placeholder="Enter your
+                                            address-city" required></label>
+                            </div>
+
+
+                            <div class="input-box">
+                                <label class="street">street
+                                    <input id="streets" type="text" placeholder="Enter your
+                                            address-street" required></label>
+                            </div>
+
+
+                            <div class="input-box">
+                                <label class="street number">street number
+                                    <input id="street-numbers" type="text" placeholder="Enter your
+                                            address-street-number" required></label>
+                            </div>
+
+                            <div class="input-box">
+                                <label class="zipcode">zipcode
+                                    <input id="zipcodes" type="text" placeholder="Enter your zipcode" required></label>
+                            </div>
+
+                            <div class="input-box">
+                                <label class="phone">phone
+                                    <input id="phones" type="text" placeholder="Enter your phone" required></label>
+                            </div>
+                            <label>
+                                <input id="checker" type="checkbox" checked="checked" name="remember"
+                                    style="align-content: center;">
+                                Remember me
+                            </label>
+
+                            <button type="submit" onclick="onSubmit()">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- start of gaming conatainer -->
+
+                <div class="Gamer">
+                    <table class="gamer">
+                        <tr>
+
+                            <td id="hp1"></td>
+                            <td></td>
+                            <td id="hp2"></td>
+                        </tr>
+                        <tr>
+                            <td id="pk1"></td>
+                            <td id="VS">VS</td>
+                            <td id="pk2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan='2' id='comment'></td>
+                        </tr>
+                        <tr>
+                            <td><input name="" type="button" class="btn" id="m0" />
+                                <input name="" type="button" class="btn" id="m1" />
+                                <input name="" type="button" class="btn" id="m2" />
+                                <input name="" type="button" class="btn" id="m3" />
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <!-- end of gaming container -->
+            </div>
+            <!-- ------ end of Main container -->
+
+        </div>
+
+
+        <!-- 
+this is footer of this page -->
+
+
+        <footer>
+            <p>for more Info meet<a href="https://www.pokemon.com/us"> Pokemon official website</a></p>
+        </footer>
+
+        <script src="script.js"></script>
+
+
+</body>
+
+</html>

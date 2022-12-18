@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../store_product_card"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "store_product_card"
+	}
+}
