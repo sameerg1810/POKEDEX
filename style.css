@@ -3,7 +3,7 @@
 } */
 
 body {
-    background: url(./images/MAINBG.jpg);
+    background: url(MAINBG.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
@@ -71,7 +71,7 @@ body {
 }
 
 .selectOptions {
-    background-image: url(./images/face4.png);
+    background-image: url(face4.png);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 1.5rem;
@@ -261,7 +261,7 @@ h2 {
     z-index: 1;
     width: 20rem;
     height: 7.8rem;
-    background-image: url(./images/Search.jpg);
+    background-image: url(Search.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     border: #4a0055 1px solid;
@@ -444,7 +444,7 @@ h2 {
 }
 
 .Gamer {
-    background-image: url(./images/Battlefield.jpg);
+    background-image: url(Battlefield.jpg);
     background-repeat: no-repeat;
     background-size: 22rem 27rem;
     position: absolute;
