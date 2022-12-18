@@ -358,25 +358,25 @@ class Pokemon {
 }
 
 let pkmList = [
-    ['Charizard', '/images/Charizard.png', 390, [
+    ['Charizard', 'Charizard.png', 390, [
         ['Flamethrower', 'fire', 95, 0.95],
         ['Dragon Claw', 'dragon', 100, 0.95],
         ['Air slash', 'fly', 75, 0.85],
         ['Slash', 'normal', 70,]
     ]],
-    ['Blastoise', '/images/Blastoise.png', 382, [
+    ['Blastoise', 'Blastoise.png', 382, [
         ['Surf', 'water', 90, 0.95],
         ['Crunch', 'normal', 80, 0.95],
         ['Ice punch', 'ice', 75, 0.95],
         ['Flash cannon', 'steel', 80, 0.95]
     ]],
-    ['Venusaur', '/images/Venusaur.png', 370, [
+    ['Venusaur', 'Venusaur.png', 370, [
         ['Petal Blizzard', 'grass', 90, 0.95],
         ['Sludge bomb', 'poison', 90, 0.95],
         ['Earthquake', 'ground', 100, 0.95],
         ['Body Slam', 'normal', 75, 0.95]
     ]],
-    ['Raichu', '/images/Raichu.png', 378, [
+    ['Raichu', 'Raichu.png', 378, [
         ['Circle Circuit', 'Thunderbolt', 90, 0.95],
         ['Spark BallGX', 'Psychic', 90, 0.95],
         ['Painfull-Punch', 'Mach Bolt', 85, 0.95],
